@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>학준❤️소희 상견례 초대장 | 정중히 초대합니다</title>
+    <title>학준❤️소희 상견례 | 정중히 초대합니다</title>
     <!-- 폰트 설정: 본고딕(Noto Sans KR) 사용 -->
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500&display=swap"
+        rel="stylesheet">
     <style>
         /* CSS 스타일링 */
         :root {
@@ -35,7 +37,7 @@
 
         .wrapper {
             width: 100%;
-            max-width: 480px; 
+            max-width: 480px;
             min-height: 100vh;
             padding: 60px 30px;
             display: flex;
@@ -160,7 +162,8 @@
         .menu-image {
             width: 100%;
             display: block;
-            filter: grayscale(100%) contrast(1.1); /* 톤앤매너 유지 */
+            filter: grayscale(100%) contrast(1.1);
+            /* 톤앤매너 유지 */
             transition: filter 0.5s ease;
         }
 
@@ -229,8 +232,15 @@
         }
 
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         footer {
@@ -240,8 +250,33 @@
             color: var(--text-sub);
             letter-spacing: 1px;
         }
+
+        .map-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .map-icon {
+            width: 18px;
+            height: 18px;
+            /* 흰색 테마 맞추기 */
+        }
+
+        .fade-up {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.8s ease;
+        }
+
+        .fade-up.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
     </style>
 </head>
+
 <body>
     <div class="wrapper">
         <!-- 헤더 -->
@@ -252,21 +287,21 @@
         </header>
 
         <!-- 메시지 -->
-        <section class="message-section">
+        <section class="message-section fade-up">
             <p>서로 다른 두 사람이 만나<br>
-            새로운 가족의 연을 맺으려 합니다.</p>
+                새로운 가족의 연을 맺으려 합니다.</p>
             <br>
             <p>양가 부모님과 가족들을 모시고<br>
-            정중히 첫 인사를 나누는 자리에<br>
-            함께해 주시면 감사하겠습니다.</p>
+                정중히 첫 인사를 나누는 자리에<br>
+                함께해 주시면 감사하겠습니다.</p>
         </section>
 
         <!-- 일시 및 카운트다운 -->
-        <section class="info-section">
+        <section class="info-section fade-up">
             <div class="info-card">
                 <h2>Date & Time</h2>
                 <p>2026년 5월 23일 (토)<br>오후 12시 30분</p>
-                
+
                 <!-- 실시간 디데이 카운트다운 -->
                 <div class="countdown-container" id="countdown">
                     <div class="countdown-item">
@@ -291,16 +326,29 @@
             <div class="info-card">
                 <h2>Location</h2>
                 <p>📍 마담풍천 보라매점</p>
-                <a href="https://naver.me/xSFaOmea" class="action-button">OPEN MAP</a>
+                <div style="display:flex; gap:10px; margin-top:20px;">
+                    <a href="https://naver.me/xSFaOmea" class="action-button map-btn">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/2/23/Naver_Logotype.svg"
+                            class="map-icon">
+                        NAVER MAP
+                    </a>
+
+                    <a href="https://place.map.kakao.com/1656564705" class="action-button map-btn">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e3/KakaoTalk_logo.svg"
+                            class="map-icon">
+                        KAKAO MAP
+                    </a>
+                </div>
             </div>
         </section>
 
         <!-- 메뉴 미리보기 섹션 -->
-        <section class="menu-section">
+        <section class="menu-section fade-up">
             <h2 class="menu-title">MENU PREVIEW</h2>
             <div class="menu-image-container">
                 <!-- 이미지 태그의 src를 실제 음식 사진 주소로 바꾸세요 -->
-                <img src="https://search.pstatic.net/common/?src=https%3A%2F%2Fnaverbooking-phinf.pstatic.net%2F20241122_181%2F1732260550327LeFPh_JPEG%2F%25C4%25DA%25BD%25BA_%25288%2529.jpg" alt="메뉴 이미지" class="menu-image">
+                <img src="https://search.pstatic.net/common/?src=https%3A%2F%2Fnaverbooking-phinf.pstatic.net%2F20241122_181%2F1732260550327LeFPh_JPEG%2F%25C4%25DA%25BD%25BA_%25288%2529.jpg"
+                    alt="메뉴 이미지" class="menu-image">
                 <div class="menu-desc">
                     풍천 코스 (장어 초밥, 구이, 덮밥 등)
                 </div>
@@ -308,7 +356,7 @@
         </section>
 
         <!-- 가족 라인업 -->
-        <section class="lineup-section">
+        <section class="lineup-section fade-up">
             <h2 class="menu-title">LINE UP</h2>
             <div class="lineup-grid">
                 <div>
@@ -366,5 +414,19 @@
         setInterval(updateCountdown, 1000);
         updateCountdown(); // 초기 실행
     </script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("show");
+                }
+            });
+        });
+
+        document.querySelectorAll(".fade-up").forEach(el => {
+            observer.observe(el);
+        });
+    </script>
 </body>
+
 </html>
