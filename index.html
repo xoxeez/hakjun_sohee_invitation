@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>학준❤️소희 상견례 초대장 | 정중히 초대합니다</title>
+    <!-- 폰트 설정: 본고딕(Noto Sans KR) 사용 -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500&display=swap" rel="stylesheet">
+    <style>
+        /* CSS 스타일링 */
+        :root {
+            --bg-color: #000000;
+            --text-main: #ffffff;
+            --text-sub: #a0a0a0;
+            --accent-color: #ffffff;
+            --card-bg: #1a1a1a;
+            --border-color: #333333;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: 'Noto Sans KR', sans-serif;
+            line-height: 1.6;
+            word-break: keep-all;
+            display: flex;
+            justify-content: center;
+        }
+
+        .wrapper {
+            width: 100%;
+            max-width: 480px; 
+            min-height: 100vh;
+            padding: 60px 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 80px;
+        }
+
+        /* 헤더 섹션 */
+        header {
+            text-align: center;
+            padding: 40px 0;
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        .header-title {
+            font-size: 28px;
+            font-weight: 300;
+            letter-spacing: 6px;
+            margin-bottom: 20px;
+            color: var(--text-main);
+        }
+
+        .header-date {
+            font-size: 14px;
+            font-weight: 300;
+            color: var(--text-sub);
+            letter-spacing: 2px;
+        }
+
+        .divider {
+            width: 40px;
+            height: 1px;
+            background-color: var(--border-color);
+            margin: 0 auto;
+        }
+
+        /* 본문 메시지 */
+        .message-section {
+            text-align: center;
+            font-size: 16px;
+            font-weight: 300;
+            color: var(--text-main);
+            line-height: 2;
+        }
+
+        /* 정보 카드 섹션 */
+        .info-section {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .info-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            padding: 30px;
+            border-radius: 4px;
+        }
+
+        .info-card h2 {
+            font-size: 11px;
+            font-weight: 400;
+            color: var(--text-sub);
+            margin-bottom: 15px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .info-card p {
+            font-size: 18px;
+            font-weight: 400;
+        }
+
+        /* 카운트다운 스타일 */
+        .countdown-container {
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid var(--border-color);
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .countdown-item {
+            text-align: center;
+        }
+
+        .countdown-value {
+            display: block;
+            font-size: 16px;
+            font-weight: 500;
+            color: var(--text-main);
+        }
+
+        .countdown-label {
+            font-size: 10px;
+            color: var(--text-sub);
+            text-transform: uppercase;
+        }
+
+        /* 메뉴 섹션 */
+        .menu-section {
+            text-align: center;
+        }
+
+        .menu-title {
+            font-size: 14px;
+            color: var(--text-sub);
+            margin-bottom: 30px;
+            letter-spacing: 4px;
+        }
+
+        .menu-image-container {
+            width: 100%;
+            border-radius: 4px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+            background-color: var(--card-bg);
+            position: relative;
+        }
+
+        /* 이미지 플레이스홀더: 실제 이미지 URL로 교체하세요 */
+        .menu-image {
+            width: 100%;
+            display: block;
+            filter: grayscale(100%) contrast(1.1); /* 톤앤매너 유지 */
+            transition: filter 0.5s ease;
+        }
+
+        .menu-image:hover {
+            filter: grayscale(0%);
+        }
+
+        .menu-desc {
+            padding: 20px;
+            font-size: 14px;
+            color: var(--text-sub);
+            font-weight: 300;
+        }
+
+        /* 라인업 섹션 */
+        .lineup-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .side-title {
+            font-size: 12px;
+            color: var(--text-sub);
+            margin-bottom: 10px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 5px;
+        }
+
+        .member-list {
+            font-size: 14px;
+            font-weight: 300;
+            list-style: none;
+        }
+
+        .member-list li {
+            margin-bottom: 12px;
+        }
+
+        .tag {
+            font-size: 10px;
+            color: var(--text-sub);
+            display: block;
+            margin-bottom: 2px;
+        }
+
+        /* 버튼 */
+        .action-button {
+            display: block;
+            width: 100%;
+            padding: 18px;
+            background-color: transparent;
+            color: var(--text-main);
+            border: 1px solid var(--text-main);
+            text-align: center;
+            text-decoration: none;
+            font-size: 13px;
+            letter-spacing: 2px;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .action-button:active {
+            background-color: var(--text-main);
+            color: var(--bg-color);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        footer {
+            text-align: center;
+            padding: 60px 0;
+            font-size: 11px;
+            color: var(--text-sub);
+            letter-spacing: 1px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <!-- 헤더 -->
+        <header>
+            <p class="header-date">2026 . 05 . 23 . SAT</p>
+            <h1 class="header-title">INVITATION</h1>
+            <div class="divider"></div>
+        </header>
+
+        <!-- 메시지 -->
+        <section class="message-section">
+            <p>서로 다른 두 사람이 만나<br>
+            새로운 가족의 연을 맺으려 합니다.</p>
+            <br>
+            <p>양가 부모님과 가족들을 모시고<br>
+            정중히 첫 인사를 나누는 자리에<br>
+            함께해 주시면 감사하겠습니다.</p>
+        </section>
+
+        <!-- 일시 및 카운트다운 -->
+        <section class="info-section">
+            <div class="info-card">
+                <h2>Date & Time</h2>
+                <p>2026년 5월 23일 (토)<br>오후 12시 30분</p>
+                
+                <!-- 실시간 디데이 카운트다운 -->
+                <div class="countdown-container" id="countdown">
+                    <div class="countdown-item">
+                        <span class="countdown-value" id="days">00</span>
+                        <span class="countdown-label">Days</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span class="countdown-value" id="hours">00</span>
+                        <span class="countdown-label">Hours</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span class="countdown-value" id="minutes">00</span>
+                        <span class="countdown-label">Min</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span class="countdown-value" id="seconds">00</span>
+                        <span class="countdown-label">Sec</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-card">
+                <h2>Location</h2>
+                <p>📍 마담풍천 보라매점</p>
+                <a href="https://naver.me/xSFaOmea" class="action-button">OPEN MAP</a>
+            </div>
+        </section>
+
+        <!-- 메뉴 미리보기 섹션 -->
+        <section class="menu-section">
+            <h2 class="menu-title">MENU PREVIEW</h2>
+            <div class="menu-image-container">
+                <!-- 이미지 태그의 src를 실제 음식 사진 주소로 바꾸세요 -->
+                <img src="https://search.pstatic.net/common/?src=https%3A%2F%2Fnaverbooking-phinf.pstatic.net%2F20241122_181%2F1732260550327LeFPh_JPEG%2F%25C4%25DA%25BD%25BA_%25288%2529.jpg" alt="메뉴 이미지" class="menu-image">
+                <div class="menu-desc">
+                    풍천 코스 (장어 초밥, 구이, 덮밥 등)
+                </div>
+            </div>
+        </section>
+
+        <!-- 가족 라인업 -->
+        <section class="lineup-section">
+            <h2 class="menu-title">LINE UP</h2>
+            <div class="lineup-grid">
+                <div>
+                    <h3 class="side-title">GROOM SIDE</h3>
+                    <ul class="member-list">
+                        <li><span class="tag">신랑 아버지</span>이영규</li>
+                        <li><span class="tag">신랑 어머니</span>황옥경</li>
+                        <li><span class="tag">예비 신랑</span>이학준</li>
+                        <li><span class="tag">신랑 동생</span>이유림</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="side-title">BRIDE SIDE</h3>
+                    <ul class="member-list">
+                        <li><span class="tag">신부 아버지</span>장덕원</li>
+                        <li><span class="tag">신부 어머니</span>김은아</li>
+                        <li><span class="tag">예비 신부</span>장소희</li>
+                        <li><span class="tag">신부 동생</span>장재식</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>설레는 마음으로 기다리겠습니다.</p>
+            <p style="margin-top: 10px; opacity: 0.5;">Created by 이학준 & 장소희</p>
+        </footer>
+    </div>
+
+    <!-- 카운트다운 자바스크립트 -->
+    <script>
+        function updateCountdown() {
+            // 상견례 날짜 설정 (연, 월-1, 일, 시, 분)
+            const targetDate = new Date(2026, 4, 23, 12, 30, 0).getTime();
+            const now = new Date().getTime();
+            const distance = targetDate - now;
+
+            if (distance < 0) {
+                document.getElementById("countdown").innerHTML = "<p style='font-size:14px; color:var(--text-sub); width:100%; text-align:center;'>상견례 당일입니다.</p>";
+                return;
+            }
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("days").innerText = String(days).padStart(2, '0');
+            document.getElementById("hours").innerText = String(hours).padStart(2, '0');
+            document.getElementById("minutes").innerText = String(minutes).padStart(2, '0');
+            document.getElementById("seconds").innerText = String(seconds).padStart(2, '0');
+        }
+
+        // 1초마다 업데이트
+        setInterval(updateCountdown, 1000);
+        updateCountdown(); // 초기 실행
+    </script>
+</body>
+</html>
